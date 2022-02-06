@@ -14,36 +14,45 @@ public class TempTest {
         System.out.println("Test Begins!\n");
     }
     @Test
-    @DisplayName("Celsius to Fahrenheit")
+    @DisplayName("Celsius to Fahrenheit1")
     void cToFTest1() {
         float tempVal =Main.cToF(0);
-        assertTrue(tempVal == 32);
+        assertTrue(tempVal == 32, () -> "Expects 32 & got: "+ tempVal);
     }
 
     @Test
     @DisplayName("Celsius to Fahrenheit2")
     void cToFTest2() {
         float tempVal =Main.cToF(100);
-        assertTrue(tempVal == 212);
+        assertTrue(tempVal == 212,() -> "Expects 212 & got: "+ tempVal);
     }
 
     @Test
     @DisplayName("Celsius to Fahrenheit3")
     void cToFTest3() {
-        float tempVal =Main.cToF(32);
-        System.out.println("Expects 89.6 & got: "+ tempVal);
-        assertTrue(tempVal == 89.6);
+        float tempVal =Math.round(Main.cToF(-6));
+        assertTrue(tempVal == 21, () -> "Expects 21 & got: "+ tempVal);
     }
 
     @Test
-    @DisplayName("Fahrenheit to Celsius")
-    void fToCTest() {
-        assertTrue(true);
+    @DisplayName("Fahrenheit to Celsius1")
+    void fToCTest1() {
+        float tempVal = Math.round(Main.fToC(-6));
+        assertTrue(-21==tempVal, () -> "Expects -21 & got: "+ tempVal);
     }
 
     @Test
-    @DisplayName("Invalid Inputs")
-    void badInpTest(){
-
+    @DisplayName("Fahrenheit to Celsius2")
+    void fToCTest2() {
+        float tempVal = Math.round(Main.fToC(212));
+        assertTrue(tempVal==100, () -> "Expects 100 & got: "+ tempVal);
     }
+
+    @Test
+    @DisplayName("Fahrenheit to Celsius3")
+    void fToCTest3() {
+        float tempVal = Math.round(Main.fToC((float) 53.56));
+        assertTrue(tempVal==12, () -> "Expects 12 & got: "+ tempVal);
+    }
+
 }
