@@ -19,10 +19,4 @@ public class TempGenerator {
         temp = (temp-32) * 5/9;
         return temp;
     }
-    public static void main(String[] args) {
-        // write your code here
-        float myTemp = cToF(43);
-        assert myTemp != 109.4 : " Wrong!";
-        System.out.println(cToF(43));
-    }
 }

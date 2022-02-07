@@ -17,15 +17,14 @@ public class TempController {
 
     /**
      * @param str: String to test if we can convert to Float
-     * @return
+     * @return float parsed
      */
     protected static float convStrFl(String str){
         try {
-            @SuppressWarnings("unused")
             float x = Float.parseFloat(str);
             return x; //String is an Integer
         } catch (NumberFormatException e) {
-            return -500; //String is not an Integer
+            return -3000; //String is not an Integer
         }
 
     }
@@ -33,13 +32,24 @@ public class TempController {
     protected void onConvertClick() {
         //We call TempGenerator
         if(degrCheckF.isSelected() && !degrCheckC.isSelected()){
-            float tempVal = Float.parseFloat(ansField.getText());
-            tempVal=TempGenerator.cToF(tempVal);
-            ansText.setText("The Fahrenheit Temperature is: "+tempVal);
+            float tempVal = convStrFl(ansField.getText());
+            if(tempVal == -3000){
+                ansText.setText("Please input a proper degree!");
+            }else{
+                tempVal=TempGenerator.cToF(tempVal);
+                ansText.setText("The Fahrenheit Temperature is: "+tempVal);
+            }
+
         }else if(degrCheckC.isSelected() && !degrCheckF.isSelected()){
-            float tempVal = Float.parseFloat(ansField.getText());
-            tempVal=TempGenerator.fToC(tempVal);
-            ansText.setText("The Celsius Temperature is: "+tempVal);
+            float tempVal = convStrFl(ansField.getText());
+            //Error Handling For non floats
+            if(tempVal == -3000){
+                ansText.setText("Please input a proper degree!");
+            }else{
+                tempVal=TempGenerator.fToC(tempVal);
+                ansText.setText("The Celsius Temperature is: "+tempVal);
+            }
+
         }else{
             ansText.setText("Make sure you select only Celsius or Fahrenheit");
         }

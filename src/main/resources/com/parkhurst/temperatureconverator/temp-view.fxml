@@ -15,7 +15,6 @@
     <Label fx:id="ansText"/>
     <Button text="Convert!" onAction="#onConvertClick"/>
     <TextField fx:id="ansField"/>
-    <CheckBox fx:id ="degrCheckF">Fahrenheit</CheckBox>
-    <CheckBox fx:id ="degrCheckC">Celsius</CheckBox>
-
+    <CheckBox fx:id ="degrCheckF">To Fahrenheit</CheckBox>
+    <CheckBox fx:id ="degrCheckC">To Celsius</CheckBox>
 </VBox>
