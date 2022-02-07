@@ -1,6 +1,6 @@
-package com.parkhurst;
+package com.parkhurst.temperatureconverator;
 //This is My Temperature Converter
-public class Main {
+public class TempGenerator {
 
     /**
      * @param temp The temperature in Celcius
