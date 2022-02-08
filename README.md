@@ -19,7 +19,7 @@ import com.parkhurst.temperatureconverator.TempGenerator;
 // returns 100
 TempGenerator.fToC(212)
 
-# returns -21
+// returns -21
 TempGenerator.cToF(-6)
 ```
 
