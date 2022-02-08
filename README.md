@@ -1,27 +1,20 @@
 # Temperature Convertor
 A simple Temperature Converator with a GUI using javafx
 
-## Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
-
 ## Usage
 
-```python
-import foobar
+Celsius To Fahrendheit
+![CTOF](images/ToF.png)
+## Usage
 
-# returns 'words'
-foobar.pluralize('word')
+```java
+import com.parkhurst.temperatureconverator.TempGenerator;
 
-# returns 'geese'
-foobar.pluralize('goose')
+// returns 100
+TempGenerator.fToC(212)
 
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+# returns -21
+TempGenerator.cToF(-6)
 ```
 
 ## License
