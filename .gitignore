@@ -29,3 +29,9 @@ hs_err_pid*
 .idea/modules.xml
 .idea/encodings.xml
 .idea/vcs.xml
+src/Temperature-Converator.iml
+src/.idea/workspace.xml
+src/.idea/vcs.xml
+src/.idea/modules.xml
+src/.idea/misc.xml
+.idea/misc.xml
