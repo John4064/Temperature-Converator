@@ -3,8 +3,14 @@ A simple Temperature Converator with a GUI using javafx
 
 ## Usage
 
-Celsius To Fahrendheit
-![CTOF](images/ToF.png)
+Celsius To Fahrendheit<br />
+![CTOF](images/ToF.png)<br />
+Fahrendheit To Celsius<br />
+![FTOC](images/ToC.png)<br />
+Both Selected<br />
+![FTOC](images/NTA.png)<br />
+Setup JUnit tests<br />
+![FTOC](images/junit.png)
 ## Usage
 
 ```java
